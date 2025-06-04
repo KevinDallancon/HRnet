@@ -1,0 +1,119 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.no-employees {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #666;
+}
+
+.employees-table-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Tableau */
+.employees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.employees-table th {
+  background-color: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.employees-table th:hover {
+  background-color: #e9ecef;
+}
+
+.employees-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.employees-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.employees-table tr:hover {
+  background-color: #e3f2fd;
+}
+
+/* Pagination */
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Responsive simple */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .employees-table-container {
+    padding: 15px;
+  }
+  
+  .employees-table {
+    font-size: 12px;
+  }
+  
+  .employees-table th,
+  .employees-table td {
+    padding: 8px;
+  }
+}
