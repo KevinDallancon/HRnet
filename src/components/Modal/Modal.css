@@ -1,6 +1,5 @@
 /* Modal.css */
 .modal-overlay {
-  
   position: fixed;
   top: 0;
   left: 0;
@@ -13,8 +12,10 @@
 }
 
 .modal-content {
-  background-color: green;
   padding: 20px;
+  width: 400px;
+  min-height: 200px;
+  border-radius: 8px;
   max-width: 90%;
   position: relative;
 }

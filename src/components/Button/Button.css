@@ -15,19 +15,27 @@
 }
 
 .primary-button {
-  background-color: #7c8c38;  /* Vert olive principal du logo */
+  background-color: #7c8c38; 
   color: white;
 }
 
-.primary-button:hover {
-  background-color: #6a7830;  /* Version légèrement plus foncée du vert olive */
-}
-
 .secondary-button {
-  background-color: #e8ebd9;  /* Beige clair/vert très pâle */
+  background-color: #e8ebd9;  
   color: #333;
 }
 
+.primary-button:hover {
+  background-color: #6c7734; 
+}
+
 .secondary-button:hover {
-  background-color: #d8dbc9;  /* Version légèrement plus foncée du beige/vert pâle */
+  background-color:#6c7734;  
+}
+
+.button:disabled {
+  background-color: #9e9e9e ; 
+  color: #000000;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: #9e9e9e;
 }

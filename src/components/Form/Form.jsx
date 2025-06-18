@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addEmployee } from '../../Redux/Slices/employeeSlice';
-import { states } from '../../data/states';
 import { departments } from '../../data/departments';
+import { states } from '../../data/states';
+import Button from '../Button/Button';
 import '../Form/Form.css';
-import Modal from '../Modal/Modal';
+import Modal from '@kevindallancon/hrnet-modal';
+// import Modal from '../Modal/Modal';
 
 const Form = () => {
 
@@ -76,9 +78,13 @@ const Form = () => {
 }
   return (
     <>
-        <form onSubmit={handleSubmit} id="create-employee">
-        <div>
-          <div>
+<form onSubmit={handleSubmit} id="create-employee">
+      
+      {/* Section informations personnelles */}
+      <section className="form-section personal-info">
+        <h3 className="section-title">Informations personnelles</h3>
+        <div className="form-grid">
+          <div className="form-field">
             <label htmlFor="firstName">Prénom</label>
             <input 
               type="text" 
@@ -90,7 +96,7 @@ const Form = () => {
             />
           </div>
           
-          <div>
+          <div className="form-field">
             <label htmlFor="lastName">Nom</label>
             <input 
               type="text" 
@@ -102,7 +108,7 @@ const Form = () => {
             />
           </div>
           
-          <div>
+          <div className="form-field">
             <label htmlFor="dateOfBirth">Date de naissance</label>
             <input 
               id="dateOfBirth"
@@ -113,7 +119,7 @@ const Form = () => {
             />
           </div>
           
-          <div>
+          <div className="form-field">
             <label htmlFor="startDate">Date de début</label>
             <input 
               id="startDate"
@@ -124,12 +130,14 @@ const Form = () => {
             />
           </div>
         </div>
-        
+      </section>
+      
+      {/* Section adresse */}
+      <section className="form-section address-section">
         <fieldset>
           <legend>Adresse</legend>
-          
-          <div>
-            <div>
+          <div className="form-grid">
+            <div className="form-field">
               <label htmlFor="street">Rue</label>
               <input 
                 id="street"
@@ -140,7 +148,7 @@ const Form = () => {
               />
             </div>
             
-            <div>
+            <div className="form-field">
               <label htmlFor="city">Ville</label>
               <input 
                 id="city"
@@ -151,7 +159,7 @@ const Form = () => {
               />
             </div>
             
-            <div>
+            <div className="form-field">
               <label htmlFor="state">État</label>
               <select 
                 name="state" 
@@ -168,7 +176,7 @@ const Form = () => {
               </select>
             </div>
             
-            <div>
+            <div className="form-field">
               <label htmlFor="zipCode">Code postal</label>
               <input 
                 id="zipCode"
@@ -180,8 +188,12 @@ const Form = () => {
             </div>
           </div>
         </fieldset>
-        
-        <div>
+      </section>
+      
+      {/* Section travail */}
+      <section className="form-section work-info">
+        <h3 className="section-title">Informations professionnelles</h3>
+        <div className="form-field">
           <label htmlFor="department">Département</label>
           <select 
             name="department" 
@@ -197,19 +209,24 @@ const Form = () => {
             ))}
           </select>
         </div>
-        
-        <div>
-          <button type="submit">Enregistrer</button>
-        </div>
-      <button type="button" onClick={() => setIsModalOpen(true)}>
-          TEST MODAL
-      </button>
-      </form>
+      </section>
+      
+      {/* Section actions */}
+      <footer className="form-actions">
+        <Button 
+          text="Enregistrer" 
+          primary={true}
+          type="submit"
+        />
+      </footer>
+      
+    </form>
       <Modal
       isOpen={isModalOpen}
       onClose={() => setIsModalOpen(false)}
       title={modalTitle}
       content={modalContent}
+      backgroundColor="#6c7734"
       />
     </>
   );

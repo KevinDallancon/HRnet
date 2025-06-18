@@ -1,13 +1,14 @@
-import React, { useState, useMemo } from 'react';
-import { useSelector } from 'react-redux';
 import {
-  useReactTable,
+  flexRender,
   getCoreRowModel,
   getFilteredRowModel,
-  getSortedRowModel,
   getPaginationRowModel,
-  flexRender,
+  getSortedRowModel,
+  useReactTable,
 } from '@tanstack/react-table';
+import React, { useMemo, useState } from 'react';
+import { useSelector } from 'react-redux';
+import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import '../../pages/ListeEmployees/ListeEmployees.css';
 
@@ -43,8 +44,11 @@ const ListEmployees = () => {
       pagination: { pageSize: 10 }
     },
   });
+  
 
   return (
+
+    
     <main className="container">
       <Header />
       <h1>Liste des Employés</h1>
@@ -65,9 +69,11 @@ const ListEmployees = () => {
               onChange={(e) => setGlobalFilter(e.target.value)}
               style={{ padding: '8px', width: '300px', marginRight: '10px' }}
             />
-            <button onClick={() => setGlobalFilter('')}>
-              Effacer
-            </button>
+            <Button
+              text="Effacer"
+              primary={true}
+              onClick={() => setGlobalFilter('')}
+            />
           </div>
 
           {/* Tableau */}
@@ -104,21 +110,21 @@ const ListEmployees = () => {
 
           {/* Pagination simple */}
           <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
-            <button
+            <Button
+              text="Précedent"
+              primary={true}
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
-            >
-              Précédent
-            </button>
+            />
             <span>
               Page {table.getState().pagination.pageIndex + 1} sur {table.getPageCount()}
             </span>
-            <button
+            <Button
+              text="Suivant"
+              primary={true}
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
-            >
-              Suivant
-            </button>
+            />
             <select
               value={table.getState().pagination.pageSize}
               onChange={(e) => table.setPageSize(Number(e.target.value))}
