@@ -1,6 +1,5 @@
-
 <p align="center">
-  <img src="./assets/logo.png" alt="Logo HRnet" width="200"/>
+  <img src="./src/assets/logo.png" alt="Logo HRnet" width="200"/>
 </p>
 
 
