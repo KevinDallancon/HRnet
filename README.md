@@ -73,6 +73,7 @@ src/
 ├── index.css              # Styles globaux
 ├── main.jsx               # Point d’entrée de l’application
 
+```
 
 ### ✅ Fonctionnalités implémentées
 
@@ -90,7 +91,7 @@ src/
 
 ### 📊 Audits de performance
 
-| Version              | Score Performance | Temps de chargement |
-|----------------------|-------------------|----------------------|
-| HRnet (jQuery)       | à renseinger                |  à renseinger                |
-| HRnet (React + Vite) | à renseinger               |  à renseinger              |
+📎 Voir les rapports PDF complets :
+
+- [📄 Rapport Lighthouse – HRnet jQuery](./rapport_lighthouse/hrnet_jquerry_pdf.pdf)
+- [📄 Rapport Lighthouse – HRnet React](./rapport_lighthouse/hrnet_react_pdf.pdf)
