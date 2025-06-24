@@ -1,4 +1,10 @@
-# HRnet - Refonte React
+
+<p align="center">
+  <img src="./assets/logo.png" alt="Logo HRnet" width="200"/>
+</p>
+
+
+# HRnet
 
 Refonte complète de l’application RH interne de WealthHealth, initialement construite en jQuery. 
 
