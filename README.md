@@ -21,11 +21,13 @@ Refonte complète de l’application RH interne de WealthHealth, initialement co
 
 ## ⚙️ Technologies utilisées
 
-- React 18 (via Vite)
-- JavaScript (ES6+)
-- React Router
-- Vite (pour le build rapide et léger)
-- Lighthouse (audit de performance)
+- **React 19** – Bibliothèque principale pour l’interface utilisateur
+- **Vite** – Outil de build rapide pour développement moderne
+- **Redux Toolkit** – Gestion d’état centralisée
+- **React Router DOM** – Navigation entre les pages
+- **TanStack Table v8** – Affichage de tableaux dynamiques
+- **React Redux** – Liaison entre Redux et les composants React
+- **@kevindallancon/hrnet-modal** – Composant modale réutilisable publié sur npm
 
 ## 🚀 Installation
 1. Clonez le dépôt :
@@ -42,14 +44,35 @@ Refonte complète de l’application RH interne de WealthHealth, initialement co
    ```
   
 
-### 📁 Structure du projet
+## 📁 Structure du projet
 
-- `src/` : Contient tous les composants React, les styles et la logique de l'application.
-- `src/components/` : Composants React réutilisables (Modal, Datepicker, Dropdowns, Table).
-- `src/pages/` : Pages principales de l'application (Create Employee, Employee List).
-- `src/styles/` : Fichiers CSS pour le style global et les composants.
-- `src/utils/` : Fonctions utilitaires et helpers.
-- `src/hooks/` : Hooks personnalisés pour la logique réutilisable.
+```bash
+src/
+├── assets/                # Fichiers statiques (images, icônes, etc.)
+│   └── logo.png
+├── components/            # Composants réutilisables
+│   ├── Button/
+│   ├── Form/
+│   ├── Header/
+│   ├── Logo/
+│   └── Modal/
+├── data/                  # Données statiques (JSON, constantes)
+│   ├── departments.js
+│   ├── fakeEmployee.json
+│   └── states.js
+├── pages/                 # Pages principales de l'application
+│   ├── Error404/
+│   ├── Home/
+│   └── ListeEmployees/
+├── Redux/                 # Structure Redux (store et slices)
+│   ├── Slices/
+│   │   └── employeeSlice.js
+│   └── Store/
+│       └── store.js
+├── App.jsx                # Composant racine
+├── index.css              # Styles globaux
+├── main.jsx               # Point d’entrée de l’application
+
 
 ### ✅ Fonctionnalités implémentées
 
@@ -57,11 +80,10 @@ Refonte complète de l’application RH interne de WealthHealth, initialement co
 
 ✅ Visualisation des employés enregistrés
 
-✅ Gestion d’état avec Zustand
+✅ Gestion d’état avec Redux Toolkit
 
 ✅ Fenêtre modale réutilisable (custom React)
 
-✅ Composants performants (datepicker, dropdown, table triable)
 
 ✅ Interface responsive et moderne
 
@@ -70,5 +92,5 @@ Refonte complète de l’application RH interne de WealthHealth, initialement co
 
 | Version              | Score Performance | Temps de chargement |
 |----------------------|-------------------|----------------------|
-| HRnet (jQuery)       | ~45               | ~3,2s                |
-| HRnet (React + Vite) | ~95               | ~0,9s                |
+| HRnet (jQuery)       | à renseinger                |  à renseinger                |
+| HRnet (React + Vite) | à renseinger               |  à renseinger              |
